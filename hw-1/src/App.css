@@ -1,0 +1,573 @@
+/* Основной контейнер приложения */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.headerContainer {
+  background-color: rgb(59, 138, 236);
+  padding: 2rem;
+  text-align: center;
+  margin: 0;
+}
+
+.headerTitle {
+  color: white;
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.headerDescription {
+  color: white;
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+}
+
+/* Main content */
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Movie catalog */
+.movie-catalog {
+  width: 100%;
+}
+
+/* Панель управления */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Строка с фильтрами и переключателем */
+.controls-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Кнопки фильтров */
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.filter-buttons button,
+.view-toggle button {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #e0e0e0;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.filter-buttons button:hover,
+.view-toggle button:hover {
+  border-color: rgb(126, 130, 220);
+  background: #f5f7ff;
+}
+
+.filter-buttons button.active,
+.view-toggle button.active {
+  background: rgb(59, 138, 236);
+  color: white;
+  border-color: rgb(126, 130, 220);
+}
+
+/* Поиск */
+.search-box {
+  width: 100%;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: rgb(126, 130, 220);
+}
+
+/* Переключатель вида */
+.view-toggle {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.view-toggle button {
+  padding: 0.75rem 1rem;
+  font-size: 1.5rem;
+}
+
+/* Контейнер фильмов - Плитка */
+.movies-container.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Контейнер фильмов - Список */
+.movies-container.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Карточка фильма - Плитка */
+.movie-card.grid-view {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card.grid-view:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.movie-card.grid-view .movie-poster {
+  width: 100%;
+  height: 375px;
+  object-fit: cover;
+}
+
+.movie-card.grid-view .movie-info {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card.grid-view .movie-info h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.movie-card.grid-view .movie-year {
+  color: #666;
+  margin: 0 0 1rem;
+  font-size: 1rem;
+}
+
+/* Карточка фильма - Список */
+.movie-card.list-view {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+}
+
+.movie-card.list-view:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.movie-card.list-view .movie-poster {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 1.5rem;
+}
+
+.movie-card.list-view .movie-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.movie-card.list-view .movie-info > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.movie-card.list-view .movie-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.movie-card.list-view .movie-year {
+  color: #666;
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+}
+
+/* Кнопка избранного */
+.favorite-btn {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: transform 0.2s ease;
+  filter: grayscale(100%);
+  opacity: 0.4;
+  margin-top: auto;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.2);
+}
+
+.favorite-btn.active {
+  filter: grayscale(0%);
+  opacity: 1;
+  animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Сообщение "Фильмов нет" */
+.no-movies {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #707070;
+  padding: 4rem 2rem;
+  width: 100%;
+}
+
+/* Footer */
+.footerContainer {
+  background-color: rgb(59, 138, 236);
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footerParagraph {
+  color: white;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Адаптивность */
+/* Малый комп или горизонтальный планшет (1024px - 1199px) */
+@media (max-width: 1199px) {
+  main {
+    padding: 1.5rem;
+  }
+
+  .movies-container.grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .movie-card.grid-view .movie-poster {
+    height: 330px;
+  }
+
+  .headerTitle {
+    font-size: 2.2rem;
+  }
+
+  .headerDescription {
+    font-size: 1.1rem;
+  }
+}
+
+/* Вертикальный планшет (768px - 1023px) */
+@media (max-width: 1023px) {
+  main {
+    padding: 1.5rem;
+  }
+
+  .headerContainer {
+    padding: 1.5rem;
+  }
+
+  .headerTitle {
+    font-size: 2rem;
+  }
+
+  .headerDescription {
+    font-size: 1rem;
+  }
+
+  .controls {
+    padding: 1.25rem;
+  }
+
+  .movies-container.grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .movie-card.grid-view .movie-poster {
+    height: 300px;
+  }
+
+  .movie-card.list-view .movie-info h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Горизонтальный телефон (576px - 767px) */
+@media (max-width: 767px) {
+  main {
+    padding: 1rem;
+  }
+
+  .headerContainer {
+    padding: 1.25rem;
+  }
+
+  .headerTitle {
+    font-size: 1.75rem;
+  }
+
+  .headerDescription {
+    font-size: 0.95rem;
+  }
+
+  .controls {
+    padding: 1rem;
+  }
+
+  .filter-buttons button,
+  .view-toggle button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .view-toggle button {
+    font-size: 1.3rem;
+  }
+
+  .movies-container.grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+
+  .movie-card.grid-view .movie-poster {
+    height: 270px;
+  }
+
+  .movie-card.grid-view .movie-info {
+    padding: 1.25rem;
+  }
+
+  .movie-card.grid-view .movie-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .movie-card.list-view .movie-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .footerContainer {
+    padding: 1.25rem;
+  }
+
+  .footerParagraph {
+    font-size: 0.9rem;
+  }
+}
+
+/* Вертикальный телефон (до 575px) */
+@media (max-width: 575px) {
+  main {
+    padding: 0.75rem;
+  }
+
+  .headerContainer {
+    padding: 1rem;
+  }
+
+  .headerTitle {
+    font-size: 1.5rem;
+  }
+
+  .headerDescription {
+    font-size: 0.85rem;
+  }
+
+  .controls-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-buttons {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .view-toggle {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .controls {
+    padding: 0.85rem;
+    gap: 0.85rem;
+  }
+
+  .search-box input {
+    padding: 0.65rem 0.85rem;
+    font-size: 0.9rem;
+  }
+
+  .filter-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .filter-buttons button {
+    width: 100%;
+    padding: 0.65rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .view-toggle {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .view-toggle button {
+    flex: 1;
+    padding: 0.65rem;
+    font-size: 1.2rem;
+  }
+
+  .movies-container.grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .movie-card.grid-view .movie-poster {
+    height: 250px;
+  }
+
+  .movie-card.grid-view .movie-info {
+    padding: 1rem;
+  }
+
+  .movie-card.grid-view .movie-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .movie-card.grid-view .movie-year {
+    font-size: 0.9rem;
+  }
+
+  .movie-card.list-view .movie-poster {
+    width: 150px;
+    height: 225px;
+  }
+
+  .movie-card.list-view .movie-info h3 {
+    font-size: 1.15rem;
+  }
+
+  .movie-card.list-view .movie-year {
+    font-size: 0.95rem;
+  }
+
+  .favorite-btn {
+    font-size: 1.6rem;
+  }
+
+  .no-movies {
+    font-size: 1.25rem;
+    padding: 3rem 1rem;
+  }
+
+  .footerContainer {
+    padding: 1rem;
+  }
+
+  .footerParagraph {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}
+
+/* Очень маленький телефон (до 440px) */
+@media (max-width: 440px) {
+  .movies-container.grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .movie-card.grid-view .movie-poster {
+    height: 400px;
+  }
+
+  .movie-card.list-view {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .movie-card.list-view .movie-poster {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    width: 120px;
+    height: 180px;
+  }
+
+  .movie-card.list-view .movie-info {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    align-items: center;
+  }
+
+  .movie-card.list-view .movie-info > div {
+    width: 100%;
+    align-items: center;
+  }
+
+  .favorite-btn {
+    margin-top: 0;
+  }
+}
