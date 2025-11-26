@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1",
+    "name": "Нео Барсик",
+    "species": "Кибер Кот",
+    "mood": "happy",
+    "energy": 100,
+    "level": 1,
+    "avatar": "🐱"
+  },
+  {
+    "id": "2",
+    "name": "Бобик",
+    "species": "Электро собака",
+    "mood": "happy",
+    "energy": 85,
+    "level": 2,
+    "avatar": "🐶"
+  },
+  {
+    "id": "3",
+    "name": "Чирик",
+    "species": "Робот птица",
+    "mood": "neutral",
+    "energy": 70,
+    "level": 1,
+    "avatar": "🐦"
+  },
+  {
+    "id": "4",
+    "name": "Крол",
+    "species": "Кибер кролик",
+    "mood": "happy",
+    "energy": 90,
+    "level": 3,
+    "avatar": "🐰"
+  },
+  {
+    "id": "5",
+    "name": "Фокси",
+    "species": "Робо лиса",
+    "mood": "neutral",
+    "energy": 65,
+    "level": 2,
+    "avatar": "🦊"
+  },
+  {
+    "id": "6",
+    "name": "Теша",
+    "species": "Электро сова",
+    "mood": "happy",
+    "energy": 80,
+    "level": 1,
+    "avatar": "🦉"
+  }
+]
