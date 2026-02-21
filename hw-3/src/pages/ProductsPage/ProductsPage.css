@@ -1,0 +1,123 @@
+.products-page {
+  max-width: 1200px;
+}
+
+.products-page__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0 0 24px;
+}
+
+.products-page__search {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.products-page__search-input {
+  flex: 1;
+  padding: 10px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-input-bg);
+  color: var(--color-text-primary);
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.products-page__search-input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.products-page__search-btn {
+  padding: 10px 20px;
+  background: var(--color-accent);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-family: inherit;
+}
+
+.products-page__search-btn:hover {
+  background: var(--color-accent-hover);
+}
+
+.products-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.products-page__error {
+  text-align: center;
+  padding: 40px;
+  color: var(--color-error);
+  font-size: 16px;
+}
+
+.products-page__empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--color-text-secondary);
+  font-size: 16px;
+}
+
+.products-page__empty-icon {
+  font-size: 48px;
+  margin: 0 0 12px;
+}
+
+.products-page__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.products-page__page-btn {
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-card-bg);
+  color: var(--color-text-primary);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.products-page__page-btn:hover:not(:disabled) {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.products-page__page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.products-page__page-btn--active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #ffffff;
+}
+
+.products-page__page-info {
+  margin-left: 12px;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}

@@ -1,0 +1,40 @@
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.not-found__content {
+  text-align: center;
+}
+
+.not-found__code {
+  font-size: 96px;
+  font-weight: 800;
+  color: var(--color-accent);
+  margin: 0;
+  line-height: 1;
+}
+
+.not-found__message {
+  font-size: 20px;
+  color: var(--color-text-secondary);
+  margin: 16px 0 32px;
+}
+
+.not-found__link {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--color-accent);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.not-found__link:hover {
+  background: var(--color-accent-hover);
+}

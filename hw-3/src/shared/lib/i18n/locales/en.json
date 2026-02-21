@@ -1,0 +1,90 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "notFound": "Page not found",
+    "goHome": "Go to home",
+    "save": "Save",
+    "cancel": "Cancel",
+    "back": "Back",
+    "search": "Search",
+    "noResults": "No results found",
+    "logout": "Logout",
+    "login": "Login",
+    "register": "Register"
+  },
+  "auth": {
+    "title": "Sign In",
+    "username": "Username",
+    "password": "Password",
+    "loginButton": "Sign In",
+    "registerLink": "Don't have an account? Register",
+    "loginLink": "Already have an account? Sign In",
+    "registerTitle": "Sign Up",
+    "email": "Email",
+    "confirmPassword": "Confirm Password",
+    "registerButton": "Sign Up",
+    "registerStub": "Registration is not available in demo mode",
+    "errors": {
+      "usernameRequired": "Username is required",
+      "passwordRequired": "Password is required",
+      "invalidCredentials": "Invalid username or password",
+      "loginFailed": "Login failed. Please try again."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome",
+    "totalProducts": "Total Products",
+    "categories": "Categories",
+    "overview": "Products Overview"
+  },
+  "products": {
+    "title": "Products",
+    "searchPlaceholder": "Search products...",
+    "price": "Price",
+    "rating": "Rating",
+    "category": "Category",
+    "description": "Description",
+    "stock": "In Stock",
+    "brand": "Brand",
+    "backToList": "Back to products",
+    "noProducts": "No products found",
+    "page": "Page",
+    "of": "of"
+  },
+  "profile": {
+    "title": "Profile",
+    "name": "Name",
+    "email": "Email",
+    "username": "Username",
+    "phone": "Phone",
+    "logoutButton": "Sign Out"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "pageSize": "Products per page",
+    "light": "Light",
+    "dark": "Dark",
+    "russian": "Russian",
+    "english": "English"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "products": "Products",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+  "header": {
+    "title": "Admin Panel"
+  },
+  "errors": {
+    "boundary": "Something went wrong",
+    "boundaryMessage": "An unexpected error occurred. Please try refreshing the page.",
+    "retry": "Try again",
+    "apiError": "Failed to load data"
+  }
+}

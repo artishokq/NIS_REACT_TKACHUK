@@ -1,0 +1,90 @@
+{
+  "common": {
+    "loading": "Загрузка...",
+    "error": "Произошла ошибка",
+    "notFound": "Страница не найдена",
+    "goHome": "На главную",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "back": "Назад",
+    "search": "Поиск",
+    "noResults": "Ничего не найдено",
+    "logout": "Выйти",
+    "login": "Войти",
+    "register": "Регистрация"
+  },
+  "auth": {
+    "title": "Вход",
+    "username": "Имя пользователя",
+    "password": "Пароль",
+    "loginButton": "Войти",
+    "registerLink": "Нет аккаунта? Зарегистрироваться",
+    "loginLink": "Уже есть аккаунт? Войти",
+    "registerTitle": "Регистрация",
+    "email": "Электронная почта",
+    "confirmPassword": "Подтвердите пароль",
+    "registerButton": "Зарегистрироваться",
+    "registerStub": "Регистрация недоступна в демо-режиме",
+    "errors": {
+      "usernameRequired": "Введите имя пользователя",
+      "passwordRequired": "Введите пароль",
+      "invalidCredentials": "Неверное имя пользователя или пароль",
+      "loginFailed": "Ошибка входа. Попробуйте снова."
+    }
+  },
+  "dashboard": {
+    "title": "Панель управления",
+    "welcome": "Добро пожаловать",
+    "totalProducts": "Всего товаров",
+    "categories": "Категории",
+    "overview": "Обзор товаров"
+  },
+  "products": {
+    "title": "Товары",
+    "searchPlaceholder": "Поиск товаров...",
+    "price": "Цена",
+    "rating": "Рейтинг",
+    "category": "Категория",
+    "description": "Описание",
+    "stock": "В наличии",
+    "brand": "Бренд",
+    "backToList": "Назад к товарам",
+    "noProducts": "Товары не найдены",
+    "page": "Страница",
+    "of": "из"
+  },
+  "profile": {
+    "title": "Профиль",
+    "name": "Имя",
+    "email": "Электронная почта",
+    "username": "Имя пользователя",
+    "phone": "Телефон",
+    "logoutButton": "Выйти"
+  },
+  "settings": {
+    "title": "Настройки",
+    "language": "Язык",
+    "theme": "Тема",
+    "pageSize": "Товаров на странице",
+    "light": "Светлая",
+    "dark": "Тёмная",
+    "russian": "Русский",
+    "english": "Английский"
+  },
+  "nav": {
+    "dashboard": "Панель управления",
+    "products": "Товары",
+    "profile": "Профиль",
+    "settings": "Настройки",
+    "logout": "Выход"
+  },
+  "header": {
+    "title": "Админ-панель"
+  },
+  "errors": {
+    "boundary": "Что-то пошло не так",
+    "boundaryMessage": "Произошла непредвиденная ошибка. Попробуйте обновить страницу.",
+    "retry": "Попробовать снова",
+    "apiError": "Не удалось загрузить данные"
+  }
+}
